@@ -36,6 +36,10 @@ Set-ItemProperty -Path HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\
 #--- Enable developer mode on the system ---
 Set-ItemProperty -Path HKLM:\Software\Microsoft\Windows\CurrentVersion\AppModelUnlock -Name AllowDevelopmentWithoutDevLicense -Value 1
 
+# comms and project management
+choco install -y slack
+choco install -y figma
+
 # tools we expect devs across many scenarios will want
 choco install -y vscode
 choco install -y git -params '"/GitAndUnixToolsOnPath /WindowsTerminal"'
